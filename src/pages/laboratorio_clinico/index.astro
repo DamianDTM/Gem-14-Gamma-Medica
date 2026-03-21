@@ -1,0 +1,133 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/laboratorio.css";
+---
+
+<Layout title="Laboratorio Clínico | Gamma Médica">
+  <Header />
+
+  <!-- Hero con imagen de fondo -->
+  <section class="lab-hero">
+    <img src="/images/Servicios/Laboratorio_Clinico/fondoF.webp" alt="" class="hero-bg" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Análisis Clínicos con Precisión Certificada</h1>
+      <p>Laboratorio equipado con tecnología de última generación para ofrecer resultados rápidos y confiables.</p>
+    </div>
+  </section>
+
+  <!-- Especialidades -->
+  <section class="section-especialidades">
+    <div class="sec-inner">
+      <h2 class="sec-title">Especialidades</h2>
+      <div class="esp-grid">
+        <div class="esp-card">
+          <span class="esp-emoji">💧</span>
+          <span class="esp-name">Hematología</span>
+        </div>
+        <div class="esp-card">
+          <span class="esp-emoji">⚛️</span>
+          <span class="esp-name">Bioquímica</span>
+        </div>
+        <div class="esp-card">
+          <span class="esp-emoji">🧪</span>
+          <span class="esp-name">Microbiología</span>
+        </div>
+        <div class="esp-card">
+          <span class="esp-emoji">🧫</span>
+          <span class="esp-name">Inmunología</span>
+        </div>
+        <div class="esp-card">
+          <span class="esp-emoji">🧬</span>
+          <span class="esp-name">Examen de ADN</span>
+        </div>
+        <div class="esp-card">
+          <span class="esp-emoji">🔬</span>
+          <span class="esp-name">Pruebas Especiales</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COVID-19 -->
+  <section class="section-covid">
+    <div class="sec-inner">
+      <div class="covid-banner">
+        <div class="covid-text">
+          <h3>Descarte de COVID-19</h3>
+          <p class="covid-sub">Resultados confiables con tecnología certificada.</p>
+          <ul>
+            <li>Prueba de Antígeno</li>
+            <li>Prueba Molecular (PCR)</li>
+            <li>Certificado con código QR verificable</li>
+            <li>Resultados en 24 horas</li>
+          </ul>
+        </div>
+        <div class="covid-img-wrap">
+          <img src="/images/Servicios/Laboratorio_Clinico/CovidF.webp" alt="COVID-19" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="section-galeria">
+    <div class="sec-inner">
+      <h2 class="sec-title">Nuestro <span class="tg">Laboratorio</span></h2>
+      <div class="galeria-grid">
+        <div class="gal-item gal-wide">
+          <img src="/images/Servicios/Laboratorio_Clinico/AnalisisF.webp" alt="Análisis Clínicos" />
+        </div>
+        <div class="gal-item">
+          <img src="/images/Servicios/Laboratorio_Clinico/MicroF.webp" alt="Microbiología" />
+        </div>
+        <div class="gal-item">
+          <img src="/images/Servicios/Laboratorio_Clinico/TubosF.webp" alt="Tubos de Ensayo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ¿Qué nos diferencia? -->
+  <section class="section-diff">
+    <div class="sec-inner">
+      <h2 class="sec-title">¿Qué nos <span class="tg">diferencia</span>?</h2>
+      <div class="diff-grid">
+        <div class="diff-item">
+          <span class="diff-emoji">🔬</span>
+          <h4>Tecnología de Punta</h4>
+          <p>Equipos automatizados de última generación para análisis precisos.</p>
+        </div>
+        <div class="diff-item">
+          <span class="diff-emoji">⏱️</span>
+          <h4>Resultados Rápidos</h4>
+          <p>Entrega de resultados en tiempo récord, disponibles en línea.</p>
+        </div>
+        <div class="diff-item">
+          <span class="diff-emoji">📱</span>
+          <h4>Resultados Online</h4>
+          <p>Acceda a sus resultados desde cualquier dispositivo, las 24 horas.</p>
+        </div>
+        <div class="diff-item">
+          <span class="diff-emoji">💳</span>
+          <h4>Pago con Código QR</h4>
+          <p>Múltiples métodos de pago para su comodidad.</p>
+        </div>
+        <div class="diff-item">
+          <span class="diff-emoji">📞</span>
+          <h4>Atención Personalizada</h4>
+          <p>Profesionales comprometidos con su bienestar.</p>
+        </div>
+        <div class="diff-item">
+          <span class="diff-emoji">✅</span>
+          <h4>Certificación de Calidad</h4>
+          <p>Procesos avalados por organismos reguladores nacionales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>

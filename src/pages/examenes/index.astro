@@ -1,0 +1,565 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Exámenes Solicitados - Gamma Médica">
+  <Header />
+
+  <main class="examenes-page">
+    <!-- Hero Section -->
+    <section class="examenes-hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <h1 class="hero-title">
+          Exámenes <span class="text-gradient">Solicitados</span>
+        </h1>
+        <p class="hero-subtitle">
+          Conoce nuestros exámenes más solicitados con la mejor tecnología y
+          precisión diagnóstica.
+        </p>
+      </div>
+    </section>
+
+    <!-- Exámenes Destacados -->
+    <section class="examenes-grid-section">
+      <div class="container">
+        <!-- Grid de 2 columnas -->
+        <div class="examenes-grid">
+          <!-- Card: Dengue -->
+          <div class="examen-card-mini">
+            <div class="mini-image-wrapper">
+              <img
+                src="/images/dengue.webp"
+                alt="Prueba de Dengue"
+                class="mini-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mini-info">
+              <div class="examen-badge">Examen Destacado</div>
+              <h3 class="mini-title">Prueba de Dengue</h3>
+              <p class="mini-subtitle">
+                Detección rápida del virus del Dengue mediante pruebas
+                serológicas IgG e IgM.
+              </p>
+              <div class="mini-features">
+                <div class="feature-tag">
+                  <span class="feature-icon">🕐</span><span
+                    >Resultados el mismo día</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">👤</span><span
+                    >Particulares y empresa</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🏥</span><span
+                    >Certificado DIGESA</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">📋</span><span
+                    >Sin cita previa</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Análisis Clínicos Urgentes -->
+          <div class="examen-card-mini">
+            <div class="mini-image-wrapper">
+              <img
+                src="/images/ACU.webp"
+                alt="Análisis Clínicos Urgentes"
+                class="mini-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mini-info">
+              <div class="examen-badge">Urgencias</div>
+              <h3 class="mini-title">Análisis Clínicos Urgentes</h3>
+              <p class="mini-subtitle">
+                Amilasa, Lipasa, PCR y Glucosa en una hora. Hemograma, Perfil de
+                Coagulación y más.
+              </p>
+              <div class="mini-features">
+                <div class="feature-tag">
+                  <span class="feature-icon">⚡</span><span
+                    >Resultados rápidos</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🔬</span><span
+                    >Tecnología de vanguardia</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🏥</span><span
+                    >Certificado DIGESA</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">📋</span><span
+                    >Sin cita previa</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Ecografías 3D/4D -->
+          <div class="examen-card-mini">
+            <div class="mini-image-wrapper">
+              <img
+                src="/images/ECO.webp"
+                alt="Ecografías de Alta Definición 3D/4D"
+                class="mini-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mini-info">
+              <div class="examen-badge">Imágenes</div>
+              <h3 class="mini-title">Ecografías 3D / 4D</h3>
+              <p class="mini-subtitle">
+                Imágenes nítidas en alta definición. Abdominal, tiroides,
+                gineco-obstétrica y partes blandas.
+              </p>
+              <div class="mini-features">
+                <div class="feature-tag">
+                  <span class="feature-icon">📷</span><span
+                    >Alta definición 3D/4D</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🛡️</span><span
+                    >Seguro para mamá y bebé</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🏥</span><span
+                    >Equipo avanzado</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🕐</span><span
+                    >Diagnóstico rápido</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Radiología Digital -->
+          <div class="examen-card-mini">
+            <div class="mini-image-wrapper">
+              <img
+                src="/images/RD.webp"
+                alt="Radiología Digital"
+                class="mini-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mini-info">
+              <div class="examen-badge">Radiología</div>
+              <h3 class="mini-title">Radiología Digital</h3>
+              <p class="mini-subtitle">
+                Radiografía de Tórax digital con equipo estacionario. Dr. Marco
+                Bereche H., Médico Radiólogo.
+              </p>
+              <div class="mini-features">
+                <div class="feature-tag">
+                  <span class="feature-icon">🖥️</span><span
+                    >Equipo estacionario digital</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🕐</span><span
+                    >Resultados el mismo día</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">👤</span><span
+                    >Particulares y empresa</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🛡️</span><span
+                    >Tecnología segura</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card: Laboratorio Clínico -->
+          <div class="examen-card-mini">
+            <div class="mini-image-wrapper">
+              <img
+                src="/images/SLC0.webp"
+                alt="Laboratorio Clínico"
+                class="mini-img"
+                loading="lazy"
+              />
+            </div>
+            <div class="mini-info">
+              <div class="examen-badge">Laboratorio</div>
+              <h3 class="mini-title">Laboratorio Clínico</h3>
+              <p class="mini-subtitle">
+                Bioquímica, Hematología, Hormonas, Inmunología, Marcadores
+                Tumorales y Enzimología.
+              </p>
+              <div class="mini-features">
+                <div class="feature-tag">
+                  <span class="feature-icon">🤖</span><span
+                    >Equipos automatizados</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">✅</span><span
+                    >Resultados garantizados</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">👨‍⚕️</span><span
+                    >Profesionales médicos</span
+                  >
+                </div>
+                <div class="feature-tag">
+                  <span class="feature-icon">🔬</span><span
+                    >Tecnología de vanguardia</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Radiografía de Tórax Digital -->
+    <section class="service-banner">
+      <div class="banner-content">
+        <h2 class="banner-title">Radiografía de Torax digital</h2>
+        <p class="banner-subtitle">Resultados el mismo día</p>
+        <div class="banner-tags">
+          <div class="banner-tag">
+            <span>Atención a particulares<br />y empresa</span>
+          </div>
+          <div class="banner-tag">
+            <span>Nuestra experiencia<br />nos avala</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style>
+  .examenes-page {
+    background-color: #f8fafc;
+    padding-bottom: 0;
+  }
+
+  /* Hero */
+  .examenes-hero {
+    position: relative;
+    padding: 7rem 2rem 3.5rem;
+    background: linear-gradient(135deg, #0b1a3d 0%, #1e3a8a 50%, #1754cf 100%);
+    overflow: hidden;
+    text-align: center;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .examenes-hero .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+    background-size: 30px 30px;
+    opacity: 0.5;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .hero-title {
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    line-height: 1.15;
+  }
+
+  .hero-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #38bdf8, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Section intro */
+  .examenes-grid-section {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .section-intro {
+    text-align: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .section-heading {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: #0f172a;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-description {
+    font-size: 1.05rem;
+    color: #64748b;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* Grid de 2 columnas */
+  .examenes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* Card Mini (50% del tamaño original) */
+  .examen-card-mini {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 0;
+    align-items: stretch;
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition:
+      box-shadow 0.4s ease,
+      transform 0.4s ease;
+  }
+
+  .examen-card-mini:hover {
+    box-shadow: 0 10px 35px rgba(23, 84, 207, 0.12);
+    transform: translateY(-3px);
+  }
+
+  .mini-image-wrapper {
+    border-radius: 12px;
+    overflow: hidden;
+    aspect-ratio: auto;
+  }
+
+  .mini-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+
+  .examen-card-mini:hover .mini-img {
+    transform: scale(1.03);
+  }
+
+  .mini-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.6rem 0 0.6rem 0.9rem;
+  }
+
+  .examen-badge {
+    display: inline-flex;
+    align-items: center;
+    background: linear-gradient(135deg, #38bdf8, #34d399);
+    color: #ffffff;
+    font-size: 0.65rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    padding: 0.3rem 0.7rem;
+    border-radius: 50px;
+    width: fit-content;
+  }
+
+  .mini-title {
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #0f172a;
+    line-height: 1.2;
+  }
+
+  .mini-subtitle {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.5;
+    margin-bottom: 0.15rem;
+  }
+
+  /* Feature Tags compactos */
+  .mini-features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .feature-tag {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: rgba(34, 139, 34, 0.08);
+    border: 1px solid rgba(34, 139, 34, 0.15);
+    color: #166534;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.35rem 0.6rem;
+    border-radius: 8px;
+    cursor: default;
+    transition: background 0.3s ease;
+  }
+
+  .feature-tag:hover {
+    background: rgba(34, 139, 34, 0.15);
+  }
+
+  .feature-icon {
+    font-size: 0.7rem;
+    flex-shrink: 0;
+  }
+
+  /* === Service Banner (Radiografía) === */
+  .service-banner {
+    background: linear-gradient(135deg, #0b1a3d 0%, #1e3a8a 60%, #1754cf 100%);
+    padding: 4rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px
+    );
+    background-size: 30px 30px;
+    opacity: 0.5;
+  }
+
+  .banner-content {
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+  }
+
+  .banner-subtitle {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 2rem;
+    font-weight: 500;
+  }
+
+  .banner-tags {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+
+  .banner-tag {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.4;
+    min-width: 200px;
+    cursor: default;
+    transition:
+      background 0.3s ease,
+      transform 0.2s ease;
+  }
+
+  .banner-tag:hover {
+    background: rgba(255, 255, 255, 0.18);
+    transform: translateY(-2px);
+  }
+
+  /* Responsive */
+  @media (max-width: 900px) {
+    .examenes-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2.2rem;
+    }
+
+    .examen-card-mini {
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+      padding: 1rem;
+    }
+
+    .mini-info {
+      padding: 0;
+    }
+
+    .section-heading {
+      font-size: 1.75rem;
+    }
+
+    .banner-title {
+      font-size: 1.75rem;
+    }
+
+    .banner-tags {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+</style>

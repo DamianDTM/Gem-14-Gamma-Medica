@@ -1,0 +1,390 @@
+/* ========================================
+   SALUD OCUPACIONAL - ESTILOS
+   ======================================== */
+
+/* ---- Layout Helpers ---- */
+.so-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.so-sec-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3354a9;
+  margin-bottom: 2.5rem;
+}
+
+.so-sec-title .so-tg,
+.so-tg {
+  background: linear-gradient(135deg, #3354a9, #2525bf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.so-highlight {
+  position: relative;
+  color: #1754cf;
+  display: inline;
+}
+
+.so-highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(135deg, rgba(23, 84, 207, 0.25), rgba(9, 44, 156, 0.25));
+  border-radius: 3px;
+  z-index: -1;
+}
+
+/* ======== HERO ======== */
+.so-hero {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.so-hero .so-hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none;
+  z-index: 0;
+}
+
+.so-hero .so-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.8));
+  z-index: 1;
+}
+
+.so-hero .so-hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 700px;
+}
+
+.so-hero .so-hero-content h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.so-hero .so-hero-content h1 .so-tg {
+  background: linear-gradient(135deg, #515da3, #8a8b93);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.so-hero .so-hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+/* ======== TIPOS DE EXÁMENES ======== */
+.so-eval-wrapper {
+  padding: 4.5rem 1.5rem;
+  background: #ffffff;
+}
+
+.so-eval-section {
+  position: relative;
+  padding: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  max-width: 1250px;
+  /* Ancho para dar un "respiro" y que no choque bordes a bordes */
+  margin: 0 auto;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(13, 72, 174, 0.309);
+}
+
+.so-eval-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.so-eval-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(248, 250, 252, 0.88), rgba(241, 245, 249, 0.82));
+  z-index: 1;
+}
+
+.so-eval-pillars {
+  position: relative;
+  z-index: 2;
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 2.5rem !important;
+  width: 100%;
+}
+
+.so-eval-pillar {
+  text-align: center;
+}
+
+.so-eval-pillar h3 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #246fd0;
+  /* Deep blue from Analisis Clinicos */
+  margin-bottom: 1.2rem;
+  line-height: 1.3;
+}
+
+.so-eval-pillar p {
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ======== LÍDERES / ABOUT ======== */
+.so-about-section {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.so-about-layout {
+  display: grid !important;
+  grid-template-columns: 1.2fr 1fr !important;
+  gap: 3rem !important;
+  align-items: center;
+}
+
+.so-about-text h2 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.so-about-text .so-about-sub {
+  font-size: 0.95rem;
+  color: #1754cf;
+  font-weight: 600;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.so-about-text .so-about-desc {
+  font-size: 0.9rem;
+  color: #475569;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.so-stats {
+  display: flex !important;
+  gap: 2.5rem !important;
+  margin-top: 1rem;
+}
+
+.so-stat-item {
+  text-align: left;
+}
+
+.so-stat-item .so-stat-num {
+  font-size: 2rem;
+  font-weight: 900;
+  color: #0f172a;
+  display: block;
+}
+
+.so-stat-item .so-stat-label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64748b;
+}
+
+.so-about-img {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.so-about-img img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======== OTROS SERVICIOS ======== */
+.so-other-section {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.so-other-layout {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 3rem !important;
+  align-items: start;
+}
+
+.so-other-text h2 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0d1527;
+  margin-bottom: 1.5rem;
+}
+
+.so-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.so-services-list li {
+  padding: 0.65rem 0 0.65rem 1.8rem;
+  position: relative;
+  font-size: 0.95rem;
+  color: #334155;
+  border-bottom: 1px solid #f1f5f9;
+  transition: color 0.2s ease;
+}
+
+.so-services-list li:hover {
+  color: #2525bf;
+}
+
+.so-services-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #2d49d4;
+  font-weight: 700;
+}
+
+.so-other-img {
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.so-other-img img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======== LOGOS / EMPRESAS ======== */
+.so-trust-section {
+  padding: 4rem 0 5rem;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.so-trust-section h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 2.5rem;
+}
+
+.so-marquee-container {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.so-marquee-track {
+  display: flex;
+  gap: 4rem;
+  width: max-content;
+  animation: so-scroll 30s linear infinite;
+  align-items: center;
+}
+
+.so-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+.so-marquee-logo {
+  height: 80px;
+  width: auto;
+  max-width: 180px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  cursor: default;
+  flex-shrink: 0;
+}
+
+.so-marquee-logo:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes so-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .so-eval-pillars {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .so-about-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .so-other-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .so-logos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .so-eval-pillars {
+    grid-template-columns: 1fr !important;
+  }
+
+  .so-logos-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .so-stats {
+    flex-direction: column !important;
+    gap: 1rem !important;
+  }
+}

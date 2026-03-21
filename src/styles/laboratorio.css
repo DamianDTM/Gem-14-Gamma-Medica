@@ -1,0 +1,318 @@
+/* ========================================
+   LABORATORIO CLÍNICO - ESTILOS
+   ======================================== */
+
+/* ---- Layout Helpers ---- */
+.sec-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.sec-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin-bottom: 2.5rem;
+}
+
+.sec-title .tg {
+  background: linear-gradient(135deg, #38bdf8, #34d399);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ======== HERO ======== */
+.lab-hero {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lab-hero .hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  max-width: none;
+  z-index: 0;
+}
+
+.lab-hero .hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.85), rgba(30, 58, 95, 0.8));
+  z-index: 1;
+}
+
+.lab-hero .hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 700px;
+}
+
+.lab-hero .hero-content h1 {
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.lab-hero .hero-content p {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+/* ======== ESPECIALIDADES ======== */
+.section-especialidades {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.esp-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.2rem !important;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+.esp-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 1.8rem 1rem;
+  text-align: center;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0.8rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.esp-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border-color: rgba(23, 84, 207, 0.25);
+}
+
+.esp-emoji {
+  font-size: 2.8rem;
+  display: block;
+  line-height: 1;
+}
+
+.esp-name {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1e3a5f;
+}
+
+/* ======== COVID BANNER ======== */
+.section-covid {
+  padding: 0 0 4rem;
+  background: #f8fafc;
+}
+
+.covid-banner {
+  background: linear-gradient(135deg, #0f172a, #1e3a5f);
+  border-radius: 20px;
+  padding: 3rem 3.5rem;
+  display: grid !important;
+  grid-template-columns: 1.4fr 1fr !important;
+  gap: 2.5rem !important;
+  align-items: center;
+  overflow: hidden;
+}
+
+.covid-text h3 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.covid-text .covid-sub {
+  font-size: 0.9rem;
+  color: rgba(56, 189, 248, 0.85);
+  font-weight: 500;
+  font-style: italic;
+  margin-bottom: 2.5rem;
+}
+
+.covid-text ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.covid-text li {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  padding: 0.55rem 0;
+  padding-left: 1.8rem;
+  position: relative;
+}
+
+.covid-text li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #34d399;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.covid-img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.covid-img-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  transform: scale(1.2);
+  -webkit-mask-image: radial-gradient(ellipse 85% 80% at center, black 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 80% at center, black 60%, transparent 100%);
+}
+
+/* ======== GALERÍA ======== */
+.section-galeria {
+  padding: 4rem 0;
+  background: #ffffff;
+}
+
+.galeria-grid {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: auto auto !important;
+  gap: 1rem !important;
+}
+
+.gal-item {
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gal-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+.gal-item.gal-wide {
+  grid-column: 1 / -1;
+}
+
+.gal-item img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.gal-item.gal-wide img {
+  height: 320px;
+  max-width: none;
+}
+
+.gal-item:not(.gal-wide) img {
+  height: 260px;
+  max-width: none;
+}
+
+/* ======== DIFERENCIADORES ======== */
+.section-diff {
+  padding: 4rem 0 5rem;
+  background: #f8fafc;
+}
+
+.diff-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  gap: 1.2rem !important;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.diff-item {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diff-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.07);
+}
+
+.diff-emoji {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.6rem;
+  line-height: 1;
+}
+
+.diff-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.3rem;
+}
+
+.diff-item p {
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ======== RESPONSIVE ======== */
+@media (max-width: 768px) {
+  .esp-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .covid-banner {
+    grid-template-columns: 1fr !important;
+  }
+
+  .galeria-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gal-item.gal-wide {
+    grid-column: 1;
+  }
+
+  .diff-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .esp-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  .diff-grid {
+    grid-template-columns: 1fr !important;
+  }
+}

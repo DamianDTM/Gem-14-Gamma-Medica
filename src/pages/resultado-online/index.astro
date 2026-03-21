@@ -1,0 +1,323 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Portal de Resultados Seguro | Gamma Médica">
+  <div class="secure-page-wrapper">
+    <!-- Header Especializado -->
+    <header class="secure-header">
+      <div class="container header-flex">
+        <a href="/" class="logo-back">
+          <span class="back-arrow">←</span>
+          <div class="brand">
+            <span class="brand-title">GAMMA MÉDICA</span>
+            <span class="brand-sub">PORTAL CLÍNICO</span>
+          </div>
+        </a>
+        <div class="security-badge">
+          <span class="lock-icon">🔒</span>
+          <span class="badge-text">Conexión Segura / Encriptada</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Dashboard -->
+    <main class="secure-main container">
+      <div class="dashboard-intro">
+        <h1>Bienvenido al Portal de Resultados</h1>
+        <p class="trust-text">
+          Sus datos médicos están protegidos bajo protocolos de máxima seguridad
+          e infraestructura Cloudflare WAF.
+        </p>
+      </div>
+
+      <div class="portal-cards-container">
+        <!-- Tarjeta Paciente -->
+        <a
+          href="http://gammamedica.tenmalab.com/loginpaciente.html"
+          target="_blank"
+          class="portal-card"
+        >
+          <div class="card-image-wrapper">
+            <img
+              src="/images/Resultados/paciente.webp"
+              alt="Paciente"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2>Paciente</h2>
+            <p>
+              Acceda a su historial clínico, descargue sus resultados en PDF y
+              revise el estado de sus evaluaciones.
+            </p>
+            <span class="btn-ingresar">Ingresar →</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta Médico -->
+        <a
+          href="http://gammamedica.tenmalab.com/loginmedico.html"
+          target="_blank"
+          class="portal-card"
+        >
+          <div class="card-image-wrapper">
+            <img
+              src="/images/Resultados/medico.webp"
+              alt="Médico"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2>Médico</h2>
+            <p>
+              Plataforma exclusiva para profesionales de la salud. Verifique los
+              resultados e interconsulte los diagnósticos.
+            </p>
+            <span class="btn-ingresar">Ingresar →</span>
+          </div>
+        </a>
+
+        <!-- Tarjeta Empresa -->
+        <a
+          href="http://gammamedica.tenmalab.com/loginempresa.html"
+          target="_blank"
+          class="portal-card"
+        >
+          <div class="card-image-wrapper">
+            <img
+              src="/images/Resultados/empresa.webp"
+              alt="Empresa"
+              class="card-image"
+            />
+          </div>
+          <div class="card-content">
+            <h2>Empresa</h2>
+            <p>
+              Panel administrativo de Salud Ocupacional para corporaciones.
+              Supervise evaluaciones pre-ocupacionales y métricas.
+            </p>
+            <span class="btn-ingresar">Ingresar →</span>
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <Footer />
+  </div>
+</Layout>
+
+<style>
+  .secure-page-wrapper {
+    background-color: #f1f5f9;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image: radial-gradient(#e2e8f0 1px, transparent 1px);
+    background-size: 20px 20px; /* Subtle medical watermark effect */
+  }
+
+  /* Secure Header */
+  .secure-header {
+    background: var(--color-white);
+    padding: 1.2rem 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border-bottom: 2px solid var(--color-accent);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo-back {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: var(--color-text-main);
+  }
+
+  .back-arrow {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    transition: transform 0.2s;
+  }
+
+  .logo-back:hover .back-arrow {
+    transform: translateX(-5px);
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand-title {
+    font-weight: 800;
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    line-height: 1.1;
+  }
+
+  .brand-sub {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+    letter-spacing: 0.5px;
+  }
+
+  .security-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: rgba(13, 223, 242, 0.1);
+    border: 1px solid var(--color-accent-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 30px;
+    color: var(--color-accent-dark);
+  }
+
+  .lock-icon {
+    font-size: 1rem;
+  }
+
+  .badge-text {
+    font-weight: 700;
+    font-size: 0.85rem;
+  }
+
+  /* Main Info */
+  .secure-main {
+    flex-grow: 1;
+    padding: 4rem 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard-intro {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 4rem;
+  }
+
+  .dashboard-intro h1 {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+
+  .trust-text {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  /* Cards Grid */
+  .portal-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    width: 100%;
+    max-width: 728px;
+  }
+
+  .portal-card {
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+  }
+
+  .portal-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(23, 84, 207, 0.15);
+  }
+
+  .card-image-wrapper {
+    width: 100%;
+    height: 182px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .card-image-wrapper::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, #ffffff);
+    pointer-events: none;
+  }
+
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+  }
+
+  .portal-card:hover .card-image {
+    opacity: 0.85;
+  }
+
+  .card-content {
+    padding: 1rem 1.2rem 1.4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    background: #ffffff;
+  }
+
+  .portal-card h2 {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 0.5rem;
+  }
+
+  .portal-card p {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    flex-grow: 1;
+  }
+
+  .btn-ingresar {
+    font-weight: 700;
+    color: var(--color-primary);
+    font-size: 0.95rem;
+    padding: 0.6rem 1.4rem;
+    border-radius: 30px;
+    background-color: rgba(23, 84, 207, 0.06);
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+
+  .portal-card:hover .btn-ingresar {
+    background-color: var(--color-primary);
+    color: #ffffff;
+  }
+</style>

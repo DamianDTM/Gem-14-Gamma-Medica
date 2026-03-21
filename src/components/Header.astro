@@ -1,0 +1,258 @@
+---
+---
+
+<header class="main-header">
+  <div class="navbar-wrapper">
+    <div class="container navbar">
+      <a href="/" class="brand-logotype" translate="no">
+        <img src="/images/LOGO GAMMA MEDICA.webp" alt="Gamma Médica - Laboratorio Clínico" class="brand-logo-img" />
+      </a>
+
+      <nav class="nav-links">
+        <a href="/">Inicio</a>
+        <a href="/nosotros">Nosotros</a>
+        <div class="nav-dropdown">
+          <span class="nav-dropdown-trigger">Servicios <span class="dropdown-arrow">▾</span></span>
+          <div class="dropdown-menu">
+            <a href="/salud_ocupacional">🏗️ Salud Ocupacional</a>
+            <a href="/laboratorio_clinico">🔬 Laboratorio Clínico</a>
+          </div>
+        </div>
+        <a href="/examenes">Exámenes</a>
+        <a href="/resultado-online">Resultados</a>
+        <a href="#contacto" class="nav-contacto">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="/resultado-online" class="btn-results">Resultados Online</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  .main-header {
+    width: 100%;
+    position: relative;
+    z-index: 1000;
+  }
+
+  /* Eliminadas reglas de top-bar */
+
+  .navbar-wrapper {
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    transition: all 0.3s ease;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+  }
+
+  /* Logo robusto anti-hydration/translator bugs */
+  .brand-logotype {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-decoration: none !important;
+  }
+
+  .brand-title {
+    font-size: 1.25rem !important;
+    font-weight: 900 !important;
+    color: var(--color-primary, #1e3a8a) !important;
+    letter-spacing: -0.5px !important;
+    line-height: 1.1 !important;
+    display: block !important;
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-muted, #64748b) !important;
+    letter-spacing: 0.5px !important;
+    display: block !important;
+  }
+
+  /* Navigation Links */
+  .nav-links {
+    display: flex;
+    gap: 2.5rem;
+  }
+
+  .nav-links a {
+    color: var(--color-text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    position: relative;
+  }
+
+  .nav-links a:hover {
+    color: var(--color-primary);
+  }
+
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+  }
+
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+
+  /* Dropdown Servicios */
+  .nav-dropdown {
+    position: relative;
+    cursor: pointer;
+  }
+
+  .nav-dropdown-trigger {
+    color: var(--color-text-main);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .dropdown-arrow {
+    font-size: 0.7rem;
+    transition: transform 0.3s ease;
+  }
+
+  .nav-dropdown:hover .nav-dropdown-trigger {
+    color: var(--color-primary);
+  }
+
+  .nav-dropdown:hover .dropdown-arrow {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(8px);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    border: 1px solid #e2e8f0;
+    padding: 0.5rem;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.25s ease;
+    z-index: 200;
+  }
+
+  .nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  .dropdown-menu a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #334155;
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .dropdown-menu a::after {
+    display: none;
+  }
+
+  .dropdown-menu a:hover {
+    background: #f1f5f9;
+    color: var(--color-primary);
+  }
+
+  /* Call to Action Button */
+  .btn-results {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    border: 2px solid var(--color-primary);
+    padding: 0.75rem 1.75rem;
+    border-radius: var(--radius-sm);
+    font-weight: 700;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 0 0 rgba(23, 84, 207, 0.6);
+    animation: breathingShadow 1.5s infinite;
+  }
+
+  .btn-results:hover {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: 0 4px 15px rgba(23, 84, 207, 0.3);
+    transform: translateY(-2px);
+    animation: none;
+  }
+
+  @keyframes breathingShadow {
+    0% {
+      box-shadow: 0 0 0 0 rgba(23, 84, 207, 0.6);
+    }
+    60% {
+      box-shadow: 0 0 0 10px rgba(23, 84, 207, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 0 rgba(23, 84, 207, 0);
+    }
+  }
+
+  /* Contacto link con efecto breathing */
+  .nav-links a.nav-contacto {
+    color: #1754cf;
+    font-weight: 700;
+    text-shadow: 0 0 8px rgba(23, 84, 207, 0.3);
+    animation: breathingText 2s ease-in-out infinite;
+  }
+
+  .nav-links a.nav-contacto:hover {
+    animation: none;
+    text-shadow: 0 0 12px rgba(23, 84, 207, 0.5);
+  }
+
+  @keyframes breathingText {
+    0%, 100% {
+      text-shadow: 0 0 4px rgba(23, 84, 207, 0.2);
+    }
+    50% {
+      text-shadow: 0 0 16px rgba(23, 84, 207, 0.6), 0 0 30px rgba(56, 189, 248, 0.3);
+    }
+  }
+
+  /* Responsive Mobile approach */
+  @media (max-width: 900px) {
+    .nav-links {
+      display: none;
+    }
+    .top-bar-content {
+      flex-direction: column;
+      gap: 0.2rem;
+      text-align: center;
+    }
+  }
+</style>

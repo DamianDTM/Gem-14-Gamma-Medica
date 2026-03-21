@@ -1,0 +1,79 @@
+---
+// src/components/LogosMarquee.astro
+const words = [
+  "LABORATORIO",
+  "EXÁMENES MÉDICOS",
+  "ANÁLISIS",
+  "SERVICIOS",
+  "EMPRESA",
+  "NATURALES"
+];
+
+// Multiplicamos el array para asegurar que cubra pantallas ultra anchas (Scroll Infinito)
+const extendedWords = [...words, ...words, ...words, ...words];
+---
+
+<section class="marquee-section">
+  <div class="marquee-container">
+    <div class="marquee-track">
+      {extendedWords.map((word) => (
+        <div class="company-logo">{word}</div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .marquee-section {
+    padding: 3rem 0;
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .marquee-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 4rem;
+    width: max-content;
+    animation: scroll 25s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  .company-logo {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: default;
+  }
+
+  .company-logo:hover {
+    opacity: 1;
+    color: var(--color-primary);
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      /* Ajustar dependiendo del ancho total de la pista replicada */
+      transform: translateX(-50%);
+    }
+  }
+</style>

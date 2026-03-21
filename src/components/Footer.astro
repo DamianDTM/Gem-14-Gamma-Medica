@@ -1,0 +1,173 @@
+---
+// src/components/Footer.astro
+---
+
+<footer class="footer" id="contacto">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <div class="logo-text">GAMMA MÉDICA</div>
+      <p class="brand-desc">Tu aliado seguro en salud corporativa y diagnósticos clínicos de confiabilidad garantizada con más de 15 años de experiencia.</p>
+      
+      <div class="certifications">
+        <span class="badge">☁️ Cloudflare Secured</span>
+        <span class="badge">🔒 SSL Encrypted</span>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Servicios Principales</h4>
+      <ul>
+        <li><a href="#servicios">Salud Ocupacional</a></li>
+        <li><a href="#servicios">Análisis Clínicos</a></li>
+        <li><a href="/resultado-online">Laboratorio a Domicilio</a></li>
+        <li><a href="/resultado-online">Chequeos Médicos</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-links">
+      <h4>Enlaces Rápidos</h4>
+      <ul>
+        <li><a href="/">Inicio</a></li>
+        <li><a href="#nosotros">Por qué elegirnos</a></li>
+        <li><a href="/resultado-online">Portal de Resultados</a></li>
+        <li><a href="#contacto">Contacto y Ubicaciones</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Comunícate</h4>
+      <div class="contact-item">
+        <strong>📍 Callao:</strong> Av. Angamos 2155 Bellavista Callao
+      </div>
+      <div class="contact-item phone-list">
+        <strong>📞 Llámanos:</strong>
+        <span>(51) 981 006 692</span>
+        <span>(51) 954 136 081</span>
+        <span>(51) 941 319 852</span>
+        <span>(51) 999 947 172</span>
+      </div>
+      <div class="contact-item">
+        <strong>✉️ Mail:</strong> informes@gammamedica.com.pe
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom border-t border-slate-700">
+    <div class="container flex-footer">
+      <p>&copy; {new Date().getFullYear()} Gamma Médica. Todos los derechos reservados. Infraestructura protegida.</p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background-color: #080f1e;
+    color: #e2e8f0;
+    padding-top: 5rem;
+  }
+
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-white);
+    margin-bottom: 1.2rem;
+    letter-spacing: 0.5px;
+  }
+
+  .brand-desc {
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    font-size: 0.95rem;
+  }
+
+  .certifications {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .badge {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-accent);
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 0.8rem;
+  }
+
+  a {
+    color: #94a3b8;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  a:hover {
+    color: var(--color-accent);
+  }
+
+  .contact-item {
+    color: #94a3b8;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .contact-item strong {
+    color: var(--color-white);
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .phone-list span {
+    display: block;
+    margin-top: 0.3rem;
+  }
+
+  .footer-bottom {
+    background-color: #050a14;
+    padding: 1.5rem 0;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+  }
+
+  .flex-footer p {
+    color: #64748b;
+    font-size: 0.85rem;
+  }
+
+  @media (max-width: 1024px) {
+    .footer-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .footer-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,329 @@
+---
+// src/components/ContactForm.astro
+---
+
+<section class="contact-section" id="contacto">
+  <div class="container">
+    <div class="contact-grid">
+      <!-- Left Column: Form Card -->
+      <div class="contact-card form-card">
+        <!-- Contenedor general del form donde inyectaremos mensajes o spinners -->
+        <div id="form-container">
+          <form id="contact-form" class="contact-form">
+            <!-- La lógica se procesará via AJAX / Fetch en el script inferior para no cambiar de página -->
+
+            <div class="form-group">
+              <label for="nombre">Nombre <span class="required">*</span></label>
+              <input type="text" id="nombre" name="nombre" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email"
+                >Correo electrónico <span class="required">*</span></label
+              >
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <div class="form-group">
+              <label for="telefono">Celular o Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" />
+            </div>
+
+            <div class="form-group">
+              <label for="area">Desplegable</label>
+              <select id="area" name="area">
+                <option value="Salud Ocupacional">Salud Ocupacional</option>
+                <option value="Laboratorio Clínico">Laboratorio Clínico</option>
+                <option value="Resultados Online">Resultados Online</option>
+                <option value="Consulta General">Consulta General</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Comentario o mensaje</label>
+              <textarea id="mensaje" name="mensaje" rows="4"></textarea>
+            </div>
+
+            <button type="submit" id="btn-submit" class="btn-submit"
+              >Enviar</button
+            >
+            <div id="form-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+
+      <!-- Right Column: Info Card -->
+      <div class="contact-card info-card">
+        <div class="info-image-header">
+          <h3 class="info-image-title">Laboratorio Gamma</h3>
+        </div>
+        <div class="info-content">
+          <p>
+            Somos una empresa innovadora dedicada a brindar a servicios de salud
+            para las empresas y los pacientes de Lima y Callao.
+          </p>
+          <p>
+            Nuestro servicio ocupacional está acreditada por DIGESA, de acuerdo
+            a la normativa vigente : Ley N° 29783 "Ley de salud y seguridad en
+            el trabajo". Pioneros en salud ocupacional en la región Callao desde
+            el año 2008.
+          </p>
+          <p>
+            En nuestro laboratorio nos caracterizamos por brindar un servicio
+            confiable, oportuno, rápido y seguro.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    padding: 5rem 0;
+    background-color: #f1f5f9;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  .contact-card {
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow:
+      0 4px 6px rgba(0, 0, 0, 0.05),
+      0 10px 15px rgba(0, 0, 0, 0.05); /* Sombra elegante */
+    overflow: hidden;
+  }
+
+  .form-card {
+    padding: 2.5rem 3rem;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    font-weight: 800;
+    color: #1e293b;
+  }
+
+  .required {
+    color: #ef4444;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: #334155;
+    background-color: #ffffff;
+    transition:
+      border-color 0.2s,
+      box-shadow 0.2s;
+    box-sizing: border-box;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+
+  .form-group select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+  }
+
+  .form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .btn-submit {
+    align-self: flex-start;
+    background-color: #3b5998;
+    color: white;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 0.8rem 2.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition:
+      background-color 0.2s ease,
+      opacity 0.2s ease;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover:not(:disabled) {
+    background-color: #2a4374;
+  }
+
+  .btn-submit:disabled {
+    background-color: #94a3b8;
+    cursor: not-allowed;
+    opacity: 0.8;
+  }
+
+  .form-status {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+
+  .form-status .success {
+    color: #15803d; /* dark green */
+    background-color: #f0fdf4;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #bbf7d0;
+  }
+
+  .form-status .error {
+    color: #b91c1c; /* dark red */
+    background-color: #fef2f2;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #fecaca;
+  }
+
+  .form-status .info {
+    color: #0369a1; /* blue */
+    background-color: #f0f9ff;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #bae6fd;
+  }
+
+  /* Right Card (Info) */
+  .info-card {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .info-image-header {
+    width: 100%;
+    height: 250px;
+    background-image:
+      linear-gradient(rgba(11, 26, 61, 0.6), rgba(11, 26, 61, 0.6)),
+      url("/images/fondo_mini_headoer.webp");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .info-image-title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    margin: 0;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
+
+  .info-content {
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    color: #64748b;
+    font-size: 1.08rem;
+    line-height: 1.6;
+  }
+
+  .info-content p {
+    margin: 0;
+  }
+
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form") as HTMLFormElement;
+    const btnSubmit = document.getElementById(
+      "btn-submit",
+    ) as HTMLButtonElement;
+    const statusDiv = document.getElementById("form-status");
+
+    if (form && btnSubmit && statusDiv) {
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault(); // Evitamos que la web se cierre o redirija
+
+        const originalText = btnSubmit.innerText;
+        btnSubmit.innerText = "Enviando...";
+        btnSubmit.disabled = true;
+        statusDiv.innerHTML = "";
+
+        // Recoger datos
+        const formData = new FormData(form);
+        const data = Object.fromEntries(formData);
+        // Parametros obligatorios de FormSubmit para APIs
+        data["_captcha"] = "false"; // Deshabilitar confirmaciones feas
+        data["_subject"] = "Nuevo Mensaje de Contacto - Gamma Médica";
+
+        try {
+          const response = await fetch(
+            "https://formsubmit.co/ajax/dathomeef@gmail.com",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+              },
+              body: JSON.stringify(data),
+            },
+          );
+
+          if (response.ok) {
+            statusDiv.innerHTML =
+              '<div class="success">✅ ¡Mensaje enviado con éxito! Nos pondremos en contacto pronto.</div>';
+            form.reset();
+          } else {
+            statusDiv.innerHTML =
+              '<div class="info">⚠️ Por motivos de seguridad (primera vez), revisa la bandeja de entrada de tu correo (dathomeef@gmail.com) para activar el formulario, o intenta de nuevo en unos minutos.</div>';
+          }
+        } catch (error) {
+          statusDiv.innerHTML =
+            '<div class="error">❌ No se pudo conectar con el servidor. Verifica tu conexión a internet o intenta nuevamente.</div>';
+        } finally {
+          btnSubmit.innerText = originalText;
+          btnSubmit.disabled = false;
+        }
+      });
+    }
+  });
+</script>

@@ -1,0 +1,180 @@
+---
+// src/components/ServicesGrid.astro
+
+const standardServices = [
+  {
+    title: 'Análisis Urgentes',
+    desc: 'Atención rápida y prioritaria para situaciones críticas que requieren resultados precisos de inmediato.',
+    icon: `<svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"></path><path d="M15 18H9"></path><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"></path><circle cx="7" cy="18" r="2"></circle><circle cx="17" cy="18" r="2"></circle><path d="M6 8h4"></path><path d="M8 6v4"></path></svg>`
+  },
+  {
+    title: 'Exámenes Especiales',
+    desc: 'Marcadores tumorales, perfiles hormonales, pruebas genéticas y descarte de patologías de alta complejidad.',
+    icon: `<svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z"></path></svg>`
+  },
+  {
+    title: 'Exámenes de Rutina',
+    desc: 'Hematología, bioquímica, inmunología y microbiología para el control periódico de tu salud personal y familiar.',
+    icon: `<svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v17.5A2.5 2.5 0 0 1 6.5 22A2.5 2.5 0 0 1 4 19.5V2"></path><path d="M20 2v17.5a2.5 2.5 0 0 1-2.5 2.5a2.5 2.5 0 0 1-2.5-2.5V2"></path><path d="M4 5h16"></path><path d="M4 10h16"></path></svg>`
+  },
+  {
+    title: 'Todas las Áreas del Laboratorio',
+    desc: 'Infraestructura completa para cubrir parasitología, uroanálisis y todo tipo de muestras clínicas en un solo lugar.',
+    icon: `<svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M9 2v8l-6 9v2h18v-2l-6-9V2"></path><path d="M9 2h6"></path><path d="M14 2v4a2 2 0 0 0 2 2h2"></path></svg>`
+  },
+  {
+    title: 'Equipamiento de Vanguardia',
+    desc: 'Analizadores automatizados y tecnología de última generación que garantiza máxima fiabilidad y cero errores.',
+    icon: `<svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path></svg>`
+  },
+  {
+    title: 'Test COVID-19 Confidencial',
+    desc: 'Pruebas RT-PCR y antígenos para pacientes y control corporativo con entrega el mismo día.',
+    icon: `<svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>`
+  }
+];
+---
+
+<section class="services-section container" id="servicios">
+  <div class="section-header">
+    <h4 class="section-subtitle">NUESTROS SERVICIOS</h4>
+    <h2 class="section-title">Especialidades del Laboratorio</h2>
+    <p class="section-desc">Cubrimos un amplio rango de pruebas diagnósticas, desde exámenes de rutina hasta perfiles especializados de alta complejidad.</p>
+  </div>
+
+  <div class="services-grid">
+    {standardServices.map((service) => (
+      <div class="service-card">
+        <div class="service-icon" set:html={service.icon} />
+        <h3>{service.title}</h3>
+        <p>{service.desc}</p>
+      </div>
+    ))}
+
+    <!-- Tarjeta Especial Destacada: Resultados Online -->
+    <div class="service-card highlight shadow-blue">
+      <div class="service-icon highlight-icon">
+        <svg viewBox="0 0 24 24" width="44" height="44" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+      </div>
+      <h3>Portal de Resultados Online</h3>
+      <p>Accede de forma encriptada y segura a tu historial médico, resultados en PDF y analíticas de seguimiento en cualquier momento y lugar.</p>
+      <a href="/resultado-online" class="service-link btn-modern">Ingresar ahora →</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .services-section {
+    padding: 4rem 2rem 6rem;
+    background-color: var(--color-bg-light);
+  }
+
+  .section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+    color: var(--color-primary);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 3.5vw, 2.8rem);
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 1.5rem;
+  }
+
+  .section-desc {
+    color: var(--color-text-muted);
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  /* El grid usará el mismo formato visual moderno (SS1), pero con los iconos azules */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+  }
+
+  .service-card {
+    background-color: var(--color-white);
+    padding: 2.5rem 2.2rem;
+    border-radius: 12px;
+    border: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02);
+  }
+
+  .service-card:hover {
+    box-shadow: 0 15px 35px rgba(23, 84, 207, 0.08); /* Sombra moderna */
+    border-color: rgba(23, 84, 207, 0.15);
+    transform: translateY(-5px);
+  }
+
+  .service-card.highlight {
+    background-color: #3158c9; /* Azul vibrante premium */
+    color: var(--color-white);
+    border-color: #3158c9;
+  }
+
+  /* Sombra más pronunciada para la tarjeta de Resultados */
+  .shadow-blue {
+    box-shadow: 0 12px 30px rgba(49, 88, 201, 0.3) !important;
+  }
+
+  .service-card.highlight h3, 
+  .service-card.highlight p {
+    color: var(--color-white);
+  }
+
+  .service-icon {
+    color: #2b456b; /* Iconos con el azul marino de Gamma (como en SS2) */
+    margin-bottom: 1.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .highlight-icon {
+    color: #ffffff; /* El SVG de la tarjeta azul debe ser blanco */
+  }
+
+  .service-card h3 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: var(--color-text-main);
+    margin-bottom: 1rem;
+  }
+
+  .service-card p {
+    color: var(--color-text-muted);
+    font-size: 0.98rem;
+    line-height: 1.65;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+  }
+
+  .service-link {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: flex-start;
+    display: inline-block;
+    transition: opacity 0.3s;
+  }
+
+  .service-link:hover {
+    opacity: 0.8;
+  }
+</style>

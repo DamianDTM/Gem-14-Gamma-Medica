@@ -1,0 +1,779 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<Layout title="Servicios | Gamma Médica">
+  <Header />
+
+  <!-- Hero Section -->
+  <section class="servicios-hero">
+    <div class="container">
+      <h1>Nuestros <span class="text-gradient">Servicios</span></h1>
+      <p class="hero-subtitle">
+        Más de 11 años acreditados en DIGESA, brindando servicios de salud con
+        tecnología de vanguardia y profesionales certificados.
+      </p>
+    </div>
+  </section>
+
+  <!-- Service Cards Selector -->
+  <section class="services-selector">
+    <div class="container">
+      <div class="service-tabs">
+        <a href="#laboratorio" class="service-tab active">
+          <span class="tab-icon">🔬</span>
+          <span class="tab-label">Laboratorio Clínico</span>
+        </a>
+        <a href="#salud-ocupacional" class="service-tab">
+          <span class="tab-icon">🏗️</span>
+          <span class="tab-label">Salud Ocupacional</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== LABORATORIO CLÍNICO ========== -->
+  <section id="laboratorio" class="service-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Laboratorio Clínico</span>
+        <h2>
+          Análisis Clínicos con <span class="text-gradient"
+            >Precisión Certificada</span>
+        </h2>
+        <p class="section-desc">
+          Laboratorio equipado con tecnología de última generación para ofrecer
+          resultados rápidos y confiables.
+        </p>
+      </div>
+
+      <!-- Servicios principales del Lab -->
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🧪</div>
+          <h3>Emergencias 24/7</h3>
+          <p>
+            Atención de análisis clínicos de urgencia las 24 horas del día, los
+            7 días de la semana.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🩸</div>
+          <h3>Análisis Clínicos</h3>
+          <p>
+            Hematología, bioquímica, inmunología, microbiología y perfiles
+            especializados completos.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Pruebas Rápidas</h3>
+          <p>
+            Resultados en tiempo récord para pruebas de descarte de COVID-19,
+            dengue y más.
+          </p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📋</div>
+          <h3>Perfiles de Salud</h3>
+          <p>
+            Paquetes completos de chequeos preventivos y perfiles de salud para
+            todas las edades.
+          </p>
+        </div>
+      </div>
+
+      <!-- COVID-19 Banner -->
+      <div class="highlight-banner">
+        <div class="banner-content">
+          <div class="banner-text">
+            <h3>Descarte de COVID-19</h3>
+            <ul>
+              <li>Prueba de Antígeno</li>
+              <li>Prueba Molecular (PCR)</li>
+              <li>Certificado con código QR verificable</li>
+              <li>Resultados en 24 horas</li>
+            </ul>
+          </div>
+          <div class="banner-image">
+            <!-- PLACEHOLDER: Imagen de laboratorio COVID -->
+            <div class="image-placeholder">
+              <span>📷</span>
+              <small>Imagen Lab COVID</small>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ¿Por qué elegirnos? -->
+      <div class="why-us-section">
+        <h2>
+          ¿Por qué elegir el laboratorio clínico <span class="text-gradient"
+            >Gamma Médica</span
+          >?
+        </h2>
+        <p class="why-desc">
+          Nuestro laboratorio cuenta con equipos de alta tecnología,
+          profesionales con amplia experiencia y protocolos de calidad avalados
+          por organismos nacionales e internacionales.
+        </p>
+        <div class="why-image-placeholder">
+          <!-- PLACEHOLDER: Imagen de equipos de laboratorio -->
+          <div class="image-placeholder large">
+            <span>📷</span>
+            <small>Imagen equipos de laboratorio</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- ¿Qué nos diferencia? -->
+      <div class="differentiators">
+        <h2>¿Qué nos <span class="text-gradient">diferencia</span>?</h2>
+        <div class="diff-grid">
+          <div class="diff-card">
+            <div class="diff-icon">🔬</div>
+            <h4>Tecnología de Punta</h4>
+            <p>
+              Equipos automatizados de última generación para análisis precisos.
+            </p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-icon">⏱️</div>
+            <h4>Resultados Rápidos</h4>
+            <p>Entrega de resultados en tiempo récord, disponibles en línea.</p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-icon">📱</div>
+            <h4>Resultados Online</h4>
+            <p>
+              Acceda a sus resultados desde cualquier dispositivo, las 24 horas.
+            </p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-icon">💳</div>
+            <h4>Pago Presencial o con Código QR</h4>
+            <p>Múltiples métodos de pago para su comodidad.</p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-icon">📞</div>
+            <h4>Atención Personalizada</h4>
+            <p>Equipo de profesionales comprometidos con su bienestar.</p>
+          </div>
+          <div class="diff-card">
+            <div class="diff-icon">✅</div>
+            <h4>Certificación de Calidad</h4>
+            <p>Procesos avalados por organismos reguladores nacionales.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SALUD OCUPACIONAL ========== -->
+  <section id="salud-ocupacional" class="service-section alt-bg">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge teal">Salud Ocupacional</span>
+        <h2>
+          Exámenes Médicos <span class="text-gradient-teal">Ocupacionales</span>
+        </h2>
+        <p class="section-desc">
+          Más de 11 años acreditados en DIGESA y vigencia renovada. Realizamos
+          exámenes médicos ocupacionales integrales.
+        </p>
+      </div>
+
+      <!-- Tipos de Exámenes -->
+      <div class="exam-types-grid">
+        <div class="exam-type-card">
+          <div class="exam-type-header green">
+            <!-- PLACEHOLDER: Imagen examen pre-ocupacional -->
+            <div class="image-placeholder small">
+              <span>📷</span>
+            </div>
+          </div>
+          <div class="exam-type-body">
+            <h3>Exámenes Pre-Ocupacionales</h3>
+            <p>
+              Evaluación integral del estado de salud del trabajador antes de su
+              ingreso al puesto de trabajo asignado.
+            </p>
+          </div>
+        </div>
+
+        <div class="exam-type-card">
+          <div class="exam-type-header blue">
+            <div class="image-placeholder small">
+              <span>📷</span>
+            </div>
+          </div>
+          <div class="exam-type-body">
+            <h3>Exámenes Periódicos</h3>
+            <p>
+              Control periódico de la salud del trabajador expuesto a factores
+              de riesgo según su actividad laboral.
+            </p>
+          </div>
+        </div>
+
+        <div class="exam-type-card">
+          <div class="exam-type-header teal">
+            <div class="image-placeholder small">
+              <span>📷</span>
+            </div>
+          </div>
+          <div class="exam-type-body">
+            <h3>Exámenes Post-Ocupacionales</h3>
+            <p>
+              Evaluación de la salud del trabajador al momento de su retiro de
+              la empresa para documentar su estado.
+            </p>
+          </div>
+        </div>
+
+        <div class="exam-type-card">
+          <div class="exam-type-header purple">
+            <div class="image-placeholder small">
+              <span>📷</span>
+            </div>
+          </div>
+          <div class="exam-type-body">
+            <h3>Exámenes Pre-Vacacionales</h3>
+            <p>
+              Evaluación del estado de salud del trabajador antes del periodo
+              vacacional para su bienestar integral.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Otros Servicios -->
+      <div class="other-services">
+        <div class="other-services-content">
+          <h2>Otros <span class="text-gradient-teal">Servicios</span></h2>
+          <ul class="services-list">
+            <li>Evaluación y control de agentes de riesgo</li>
+            <li>Vigilancia Médica Ocupacional</li>
+            <li>Capacitaciones en Seguridad y Salud</li>
+            <li>Audiometría</li>
+            <li>Electrocardiograma</li>
+            <li>Evaluación Psicológica Ocupacional</li>
+            <li>Consulta Médica en general</li>
+          </ul>
+        </div>
+        <div class="other-services-image">
+          <!-- PLACEHOLDER: Imagen de salud ocupacional -->
+          <div class="image-placeholder large">
+            <span>📷</span>
+            <small>Imagen salud ocupacional</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- Galería placeholder -->
+      <div class="gallery-row">
+        <div class="image-placeholder gallery">
+          <span>📷</span>
+          <small>Foto equipo de trabajo</small>
+        </div>
+        <div class="image-placeholder gallery">
+          <span>📷</span>
+          <small>Foto instalaciones</small>
+        </div>
+        <div class="image-placeholder gallery">
+          <span>📷</span>
+          <small>Foto atención</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <Footer />
+</Layout>
+
+<style>
+  /* ======== Hero ======== */
+  .servicios-hero {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    padding: 5rem 2rem 3.5rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .servicios-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(
+      rgba(56, 189, 248, 0.08) 1px,
+      transparent 1px
+    );
+    background-size: 24px 24px;
+  }
+
+  .servicios-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    position: relative;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.7;
+    position: relative;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #38bdf8, #34d399);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-gradient-teal {
+    background: linear-gradient(135deg, #2dd4bf, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* ======== Service Tabs ======== */
+  .services-selector {
+    background: #ffffff;
+    padding: 2rem 2rem 0;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
+
+  .service-tabs {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+  }
+
+  .service-tab {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    color: var(--color-text-muted, #64748b);
+    font-weight: 600;
+    font-size: 1rem;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+  }
+
+  .service-tab:hover,
+  .service-tab.active {
+    color: var(--color-primary, #1754cf);
+    border-bottom-color: var(--color-primary, #1754cf);
+  }
+
+  .tab-icon {
+    font-size: 1.3rem;
+  }
+
+  /* ======== Service Sections ======== */
+  .service-section {
+    padding: 5rem 2rem;
+    background: #ffffff;
+  }
+
+  .service-section.alt-bg {
+    background: #f8fafc;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .section-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #38bdf8, #34d399);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0.35rem 1rem;
+    border-radius: 50px;
+    margin-bottom: 1rem;
+  }
+
+  .section-badge.teal {
+    background: linear-gradient(135deg, #2dd4bf, #06b6d4);
+  }
+
+  .section-header h2 {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  .section-desc {
+    font-size: 1.05rem;
+    color: #64748b;
+    max-width: 650px;
+    margin: 0 auto;
+    line-height: 1.7;
+  }
+
+  /* ======== Features Grid ======== */
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .feature-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    border-color: rgba(23, 84, 207, 0.2);
+  }
+
+  .feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ======== Highlight Banner ======== */
+  .highlight-banner {
+    background: linear-gradient(135deg, #0f172a, #1e3a5f);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 4rem;
+    overflow: hidden;
+  }
+
+  .banner-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .banner-text h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 1rem;
+  }
+
+  .banner-text ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .banner-text li {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .banner-text li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #34d399;
+    font-weight: 700;
+  }
+
+  /* ======== Why Us ======== */
+  .why-us-section {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .why-us-section h2 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+  }
+
+  .why-desc {
+    font-size: 1rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+
+  /* ======== Differentiators ======== */
+  .differentiators {
+    text-align: center;
+  }
+
+  .differentiators h2 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem);
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 2rem;
+  }
+
+  .diff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .diff-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+  }
+
+  .diff-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  .diff-icon {
+    font-size: 2rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .diff-card h4 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+  }
+
+  .diff-card p {
+    font-size: 0.82rem;
+    color: #64748b;
+    line-height: 1.5;
+  }
+
+  /* ======== Exam Types Grid ======== */
+  .exam-types-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .exam-type-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+  }
+
+  .exam-type-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .exam-type-header {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .exam-type-header.green {
+    background: linear-gradient(135deg, #34d399, #10b981);
+  }
+  .exam-type-header.blue {
+    background: linear-gradient(135deg, #38bdf8, #3b82f6);
+  }
+  .exam-type-header.teal {
+    background: linear-gradient(135deg, #2dd4bf, #06b6d4);
+  }
+  .exam-type-header.purple {
+    background: linear-gradient(135deg, #a78bfa, #8b5cf6);
+  }
+
+  .exam-type-body {
+    padding: 1.5rem;
+  }
+
+  .exam-type-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+  }
+
+  .exam-type-body p {
+    font-size: 0.88rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ======== Other Services ======== */
+  .other-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  .other-services h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1.5rem;
+  }
+
+  .services-list {
+    list-style: none;
+    padding: 0;
+  }
+
+  .services-list li {
+    padding: 0.6rem 0;
+    padding-left: 1.8rem;
+    position: relative;
+    font-size: 0.95rem;
+    color: #334155;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .services-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: #2dd4bf;
+    font-weight: 700;
+  }
+
+  /* ======== Gallery Row ======== */
+  .gallery-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  /* ======== Image Placeholders ======== */
+  .image-placeholder {
+    background: linear-gradient(135deg, #e2e8f0, #f1f5f9);
+    border: 2px dashed #cbd5e1;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 150px;
+    color: #94a3b8;
+    transition: all 0.3s ease;
+  }
+
+  .image-placeholder:hover {
+    border-color: #38bdf8;
+    background: linear-gradient(135deg, #e0f2fe, #f0fdfa);
+  }
+
+  .image-placeholder span {
+    font-size: 2.5rem;
+  }
+
+  .image-placeholder small {
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .image-placeholder.large {
+    min-height: 250px;
+  }
+
+  .image-placeholder.small {
+    min-height: 100px;
+    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+  }
+
+  .image-placeholder.small span {
+    font-size: 2rem;
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  .image-placeholder.gallery {
+    min-height: 200px;
+  }
+
+  /* ======== Responsive ======== */
+  @media (max-width: 768px) {
+    .banner-content {
+      grid-template-columns: 1fr;
+    }
+    .other-services {
+      grid-template-columns: 1fr;
+    }
+    .gallery-row {
+      grid-template-columns: 1fr;
+    }
+    .exam-types-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .service-tabs {
+      flex-direction: column;
+    }
+    .exam-types-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<script>
+  // Smooth scroll & active tab switching
+  document.querySelectorAll(".service-tab").forEach((tab) => {
+    tab.addEventListener("click", (e) => {
+      document
+        .querySelectorAll(".service-tab")
+        .forEach((t) => t.classList.remove("active"));
+      tab.classList.add("active");
+    });
+  });
+</script>
