@@ -8,22 +8,55 @@
         <img src="/images/LOGO GAMMA MEDICA.webp" alt="Gamma Médica - Laboratorio Clínico" class="brand-logo-img" />
       </a>
 
-      <nav class="nav-links">
+      <!-- Desktop Nav -->
+      <div class="desktop-nav">
+        <nav class="nav-links">
+          <a href="/">Inicio</a>
+          <a href="/nosotros">Nosotros</a>
+          <div class="nav-dropdown">
+            <span class="nav-dropdown-trigger">Servicios <span class="dropdown-arrow">▾</span></span>
+            <div class="dropdown-menu">
+              <a href="/salud_ocupacional">🏗️ Salud Ocupacional</a>
+              <a href="/laboratorio_clinico">🔬 Laboratorio Clínico</a>
+            </div>
+          </div>
+          <a href="/examenes">Exámenes</a>
+          <a href="/resultado-online">Resultados</a>
+          <a href="#contacto" class="nav-contacto">Contacto</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="/resultado-online" class="btn-results">Resultados Online</a>
+        </div>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Overlay Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-inner">
+      <button class="mobile-close" id="mobile-close" aria-label="Cerrar">&times;</button>
+      <nav class="mobile-links">
         <a href="/">Inicio</a>
         <a href="/nosotros">Nosotros</a>
-        <div class="nav-dropdown">
-          <span class="nav-dropdown-trigger">Servicios <span class="dropdown-arrow">▾</span></span>
-          <div class="dropdown-menu">
-            <a href="/salud_ocupacional">🏗️ Salud Ocupacional</a>
-            <a href="/laboratorio_clinico">🔬 Laboratorio Clínico</a>
+        <div class="mobile-dropdown">
+          <button class="mobile-dropdown-trigger">Servicios ▾</button>
+          <div class="mobile-dropdown-content">
+            <a href="/salud_ocupacional" class="dropdown-item">🏗️ Salud Ocupacional</a>
+            <a href="/laboratorio_clinico" class="dropdown-item">🔬 Laboratorio Clínico</a>
           </div>
         </div>
         <a href="/examenes">Exámenes</a>
         <a href="/resultado-online">Resultados</a>
-        <a href="#contacto" class="nav-contacto">Contacto</a>
+        <a href="#contacto" class="mobile-contacto">Contacto</a>
       </nav>
-
-      <div class="nav-actions">
+      <div class="mobile-actions">
         <a href="/resultado-online" class="btn-results">Resultados Online</a>
       </div>
     </div>
@@ -245,14 +278,185 @@
   }
 
   /* Responsive Mobile approach */
+  .desktop-nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  
+  .mobile-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+  }
+
+  .mobile-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--color-primary);
+    border-radius: 3px;
+    transition: 0.3s;
+  }
+
+  /* Mobile Overlay */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    z-index: 2000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, right 0s 0.3s;
+  }
+
+  .mobile-menu.is-open {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, right 0s;
+  }
+
+  .mobile-menu-inner {
+    position: absolute;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    max-width: 80vw;
+    height: 100%;
+    background: #ffffff;
+    padding: 4rem 2rem 2rem;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    overflow-y: auto;
+  }
+
+  .mobile-menu.is-open .mobile-menu-inner {
+    right: 0;
+  }
+
+  .mobile-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    color: var(--color-text-main);
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  .mobile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .mobile-links a {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    text-decoration: none;
+    transition: 0.2s;
+  }
+
+  .mobile-dropdown-trigger {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    text-decoration: none;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 0;
+    cursor: pointer;
+    font-family: inherit;
+    width: 100%;
+  }
+
+  .mobile-dropdown-content {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 1rem;
+    margin-top: 1rem;
+    border-left: 2px solid var(--color-primary);
+  }
+
+  .mobile-dropdown.is-open .mobile-dropdown-content {
+    display: flex;
+  }
+  
+  .mobile-dropdown-content .dropdown-item {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+  }
+
+  .mobile-contacto {
+    color: var(--color-primary) !important;
+  }
+
+  .mobile-menu .btn-results {
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    display: block;
+    box-sizing: border-box;
+  }
+
   @media (max-width: 900px) {
-    .nav-links {
+    .desktop-nav {
       display: none;
     }
-    .top-bar-content {
-      flex-direction: column;
-      gap: 0.2rem;
-      text-align: center;
+    .mobile-toggle {
+      display: flex;
     }
   }
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileClose = document.getElementById('mobile-close');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const dropdownTriggers = document.querySelectorAll('.mobile-dropdown-trigger');
+
+    if (mobileToggle && mobileClose && mobileMenu) {
+      mobileToggle.addEventListener('click', () => {
+        mobileMenu.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      });
+
+      mobileClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        document.body.style.overflow = '';
+      });
+      
+      mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+          mobileMenu.classList.remove('is-open');
+          document.body.style.overflow = '';
+        }
+      });
+    }
+
+    dropdownTriggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const parent = trigger.parentElement;
+        if(parent) parent.classList.toggle('is-open');
+      });
+    });
+  });
+</script>
